@@ -33,8 +33,9 @@ const sildebar=document.getElementById('sildebar');
 document.onclick = function(e){
 if(e.target.id !== 'sildebar' && e.target.id !== 'toggle')
 {
-     toggle.classList.remove('active');
+      toggle.classList.remove('active');
      sildebar.classList.remove('active');
+   
 
 }
 }
