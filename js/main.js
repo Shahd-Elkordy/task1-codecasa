@@ -1,7 +1,7 @@
 
 var sections=document.querySelectorAll('section');
 onscroll = function(){
-var scrollposition=document.documentElement.scrollTop;   //<<<<<<<<<<<<<<
+var scrollposition=document.documentElement.scrollTop;   
 sections.forEach( section => {
 if(scrollposition >= section.offsetTop -  section.offsetHeight *.25 && scrollposition <section.offsetTop + 
     section.offsetHeight-  section.offsetHeight *.25 ){
@@ -23,25 +23,14 @@ var addActiveClass= function(id){
 }
 
 
-
-
-
-
 const toggle=document.getElementById('toggle');
 const sildebar=document.getElementById('sildebar');
 
 document.onclick = function(e){
-if(e.target.id !== 'sildebar' && e.target.id !== 'toggle')
+if(e.target.id !== 'sildebar' && e.target.id !== 'toggle'&& sildebar.classList.contains('show'))
 {
-      toggle.classList.remove('active');
-     sildebar.classList.remove('active');
-   
 
+        toggle.click();
+  
 }
-}
-
-
-toggle.onclick = function(){
-    toggle.classList.toggle('active');
-    sildebar.classList.toggle('active');
 }

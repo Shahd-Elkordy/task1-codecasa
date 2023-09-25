@@ -26,6 +26,7 @@ h3 {
     box-sizing: border-box;
 }
 
+.button,
 .main-btn {
     background-color: #20c997;
     color: white;
@@ -33,13 +34,18 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-    transition: all .3s ease;
+    border-radius: 100px;
+     transition: all .3s ease;  
+    animation: annimation3 .9s .75s ; 
+    animation-fill-mode: backwards;
+  
 }
 
+.button:hover,
 .main-btn:hover {
     background-color: transparent;
     color: white;
-}
+} 
 
 .navbar {
     background-color: var(--primary-color);
@@ -86,6 +92,63 @@ h3 {
     background-color: #033b4a;
     min-height: calc(100vh - 75px);
 }
+#home p{
+    animation: annimation1 1s ease-out;
+   
+}
+#home h1{
+    animation: annimation2 1s ease-out;
+   
+}
+
+
+
+@keyframes annimation1 {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+    80%{
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+    
+}
+
+@keyframes annimation2 {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+    
+}
+@keyframes annimation3 {
+    0%{
+        opacity: 0;
+       
+    }
+   
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+    
+}
 
 .icons a i {
     padding: 10px;
@@ -120,6 +183,10 @@ h3 {
 
 .star {
     color: yellow;
+    transition: all .1s ease;
+}
+.star:hover{
+    color: rgb(255, 255, 255);
 }
 
 #skills {
@@ -171,7 +238,9 @@ h3 {
 }
 
 .item2 img:hover {
-    transform: scale(.85);
+   
+     
+     transform: translateY(-25px);
 }
 #contact{
     background-color: var(--primary-color);
